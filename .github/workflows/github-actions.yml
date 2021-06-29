@@ -4,5 +4,11 @@ jobs:
   run-java:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout action repository
+        uses: actions/checkout@v2
+        with: 
+          repository: ex1642/actions
+          #token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: ./.github/actions/actions
       - name: Test using action
-        uses: ex1642/actions/java-build-base
+        uses: ./.github/actions/actions/java-build-base

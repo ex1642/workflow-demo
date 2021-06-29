@@ -1,5 +1,8 @@
 name: Workflow demo
 on: [push]
+
+permissions: read-all
+
 jobs:
   run-java:
     runs-on: ubuntu-latest

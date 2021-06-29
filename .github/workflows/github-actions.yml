@@ -9,6 +9,7 @@ jobs:
         with: 
           repository: ex1642/actions
           #token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          ref: main
           path: ./.github/actions/actions
       - name: Test using action
         uses: ./.github/actions/actions/java-build-base

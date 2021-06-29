@@ -1,0 +1,8 @@
+name: Workflow demo
+on: [push]
+jobs:
+  run-java:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test using action
+        uses: ex1642/actions/java-build-base
